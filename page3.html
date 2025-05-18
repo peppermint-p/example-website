@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>a grid layouted page</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <style>
+    /* Grid Layout Styling 
+    https://www.w3schools.com/css/css_grid.asp 
+    oder https://css-tricks.com/snippets/css/complete-guide-grid/*/
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* fr für fraction */
+      grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+      gap: 5px;
+      background-color: #ddffcc;
+      padding: 10px;
+    }
+
+    .header {
+      grid-column: 1 / span 3;
+      grid-row: 1;
+      background-color: lightgreen;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .footer {
+      grid-column: 1 / span 3;
+      grid-row: 5;
+      background-color: palegreen;
+      padding: 10px;
+      text-align: right;
+    }
+
+    .grid-item-a {
+      grid-column: 1;
+      grid-row: 2;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+
+    }
+
+    .grid-item-b {
+      grid-column: 2;
+      grid-row: 3;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+
+    }
+
+    .grid-item-c {
+      grid-column: 3;
+      grid-row: 4;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="Navigation">
+    <div class="class3">
+      <p>hier geht es zurück zu Seite 1:
+        <a href="index.html"> Hauptseite </a>
+      </p>
+    </div>
+  </div>
+
+  <h1 class="headline-class">Seite 3 (mit Grid Layout)</h1>
+  <p>The Grid Layout Module offers a grid-based layout system, with rows and columns.</p>
+  <p>
+    Mehr zum Grid Layout gibt es
+    <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">hier mit vielen Erklärungen</a> oder
+    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">hier in der Übersicht</a>
+  </p>
+
+  <div class="grid-container">
+    <div class="header">
+      <h3>header</h3>
+    </div>
+    <div class="grid-item-a""><img class=" img-centered" src="pixabay_apple-1508049_1280.png"></div>
+    <div class="grid-item-b""><img class=" img-centered" src="Pixabay_grapes-2520999_1280.png"></div>
+    <div class="grid-item-c""><img class=" img-centered" src="Pixabay_orange-2743418_1280.png"></div>
+    <div class="footer">Footer</div>
+  </div>
+
+
+
+
+</body>
+
+</html>

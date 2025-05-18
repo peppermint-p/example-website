@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Website-Interaktiv</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    #img1 {
+      height: 100px;
+      width: auto;
+      float: right;
+      background-color: linen;
+      display: none;
+      border-style: solid;
+      border-radius: 50%;
+    }
+
+    #text1 {
+      text-align: center;
+      display: none;
+    }
+
+    .class4 {
+      height: 50%;
+    }
+
+    /*flipping card styling*/
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 200px;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px;
+      /* Remove this if you don't want the 3D effect */
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+      background-color: dodgerblue;
+      color: white;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="headline-class"> Interaktionen mit Java Script</h1>
+  <div>
+    <h2> my favourite drinks for breakfast</h2>
+    <ol>
+      <li>Cappuchino</li>
+      <li>Espresso</li>
+      <li>Black Tea</li>
+      <li>Green Tea</li>
+      <li>Ginger-Lemon Tea</li>
+    </ol>
+  </div>
+
+  <div class="class3">
+    <button id="button1">Click here</button>
+    <input type="button" onclick="alert('Hello World!')" value="Alert!">
+    <input type="button" onclick="changeColor()" value="Change Color!">
+  </div>
+
+  <div class="class4">
+    <h2> Übrigens...</h2>
+
+    <img id="img1" src="pixabay_apple-1508049_1280.png">
+    <p>lorem ipsum dolor est </p>
+
+    <input type="checkbox" id="myCheck" onclick="showContent()"> check me
+    <p id="text1">Checkbox is CHECKED!</p>
+
+  </div>
+
+  <div class="class3">
+    <h2>ein Formular mit Eingabefeldern</h2>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="username" name="username"">
+      <label for=" birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday">
+      <label for="emailaddress"">Email:</label>
+      <input type=" email" id="email" name="email"><label for="telnumber"">Telefone Number:</label>
+      <input type=" number" id="telnum" name="telnum">
+          <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="class4">
+    <h2>a flipping card</h2>
+    <p></p><a href="https://www.w3schools.com/howto/howto_css_flip_card.asp">hier ein Lernbeispiel auf w3 schools</a>
+    <a href="http://www.freepik.com">Avatar Bild designed by studiogstock / Freepik</a>
+
+    </p>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="freepik_Studiostock_60111.jpg" alt="Avatar" style="width:200px;height:200px;">
+          <h1>John Doe</h1>
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1>
+          <p>Architect & Engineer</p>
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="Navigation">
+    <div class="class3">
+      <p>hier geht es zurück zu Seite 1:
+        <a href="index.html"> Hauptseite </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- call the script at the end of the body-->
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

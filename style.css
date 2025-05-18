@@ -1,0 +1,80 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* using a color picker page: https://www.w3schools.com/colors/colors_picker.asp */
+body {
+  background-color: #ffffe6;
+  /*box-sizing: border-box;*/
+}
+
+h1 {
+  color: azure;
+  /* Standardfarbe für Hauptüberschrift h1 */
+  text-align: center;
+}
+
+p {
+  text-align: left;
+  /* default: text linksbündig */
+  margin: 10px;
+}
+
+/* work under progress... hier fehlt noch das Styling des Containers...*/
+
+img {
+  float: left;
+  /*Bild links ausgerichtet, wird rechts vom Text umflossen*/
+  width: 30%;
+  height: auto;
+}
+
+.img-centered {
+  width: 100%;
+  display: block;
+  background-color: lightyellow;
+}
+
+/* eine Klassen-Definition für Überschriften */
+.headline-class {
+  color: maroon;
+}
+
+/* hier wird jetzt nur das Element mit der id="specialOne" geändert*/
+#specialOne {
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+}
+
+.class1 {
+  background-color: darkgray;
+  padding: 20px;
+  float: left;
+  width: 80%;
+  margin: 0 50px;
+}
+
+.class2 {
+  background-color: lightgray;
+  padding: 20px;
+  float: left;
+  width: 80%;
+  margin: 0 50px;
+}
+
+.class3 {
+  background-color: white;
+  width: auto;
+  padding: 20px;
+  /*margin: 20px;*/
+  text-align: center;
+  float: none;
+}
+
+.class4 {
+  background-color: lightgray;
+  padding: 20px;
+  float: none;
+}
